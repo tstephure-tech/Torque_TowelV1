@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a slot — Torque &amp; Towel</title>
+<meta name="description" content="Book detailing, paint correction, ceramic coating, wrap or tint. Live pricing, real availability, twenty percent deposit holds the bay.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preload" href="assets/fonts/cabinet-grotesk-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/booking.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#booking">Skip to booking</a>
+
+<header class="header">
+  <div class="header__left">
+    <a class="plate" href="index.html">
+      <span class="plate__roll">
+        <span><span class="plate__noun">Back</span></span>
+        <span aria-hidden="true"><span class="plate__noun">Back</span></span>
+      </span>
+    </a>
+    <a class="wordmark is-on" href="index.html" aria-label="Torque &amp; Towel — home">
+      <img src="assets/logo-lockup.png" alt="Torque &amp; Towel" width="609" height="262">
+    </a>
+  </div>
+  <div class="header__right">
+    <span class="mono" style="color:var(--muted)">Mon–Sat · 08:00–18:00</span>
+  </div>
+</header>
+
+<main class="bk" id="booking">
+  <div class="bk__head">
+    <div>
+      <h1 class="display bk__title">Book <em>a slot.</em></h1>
+      <p class="bk__note" style="margin-top:14px">Fixed prices before you commit. Twenty percent deposit holds the bay; the balance is settled on collection.</p>
+    </div>
+    <ol class="steps-nav" id="stepsNav" aria-label="Booking progress">
+      <li data-step="1" data-current="true"><b>01</b><span>Service</span></li>
+      <li data-step="2"><b>02</b><span>Vehicle</span></li>
+      <li data-step="3"><b>03</b><span>Time</span></li>
+      <li data-step="4"><b>04</b><span>Details</span></li>
+    </ol>
+  </div>
+
+  <div class="bk__grid" id="bkGrid">
+    <form class="bk__form" id="bookForm" novalidate>
+
+      <!-- ------------------------------------------------------- step 1 -->
+      <section class="step is-active" data-step="1" aria-labelledby="s1">
+        <h2 class="step__title" id="s1">What needs doing</h2>
+        <p class="step__hint">Pick a service. Every one of them ends with a written record of what we did.</p>
+        <div class="tabs" id="catTabs" role="tablist" aria-label="Service category"></div>
+        <div class="opts" id="serviceList" role="radiogroup" aria-label="Service"></div>
+        <div class="step__nav">
+          <span class="spacer"></span>
+          <button class="btn" type="button" id="next1" disabled>Continue</button>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------- step 2 -->
+      <section class="step" data-step="2" aria-labelledby="s2" hidden>
+        <h2 class="step__title" id="s2">Your car</h2>
+        <p class="step__hint">Size changes the price and the time we book. Add-ons stack on top of the service.</p>
+
+        <div class="opts" id="vehicleList" role="radiogroup" aria-label="Vehicle class"></div>
+
+        <div class="field-row" style="margin-top:32px">
+          <div class="field">
+            <label for="make">Make</label>
+            <input id="make" name="make" type="text" placeholder="Porsche" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="model">Model</label>
+            <input id="model" name="model" type="text" placeholder="911 Carrera" autocomplete="off">
+          </div>
+        </div>
+
+        <h3 class="step__title" style="font-size:1.125rem; margin-top:12px">Add-ons</h3>
+        <p class="step__hint" style="margin-bottom:18px">Optional. Each one adds time to the booking.</p>
+        <div class="opts opts--compact" id="addonList"></div>
+
+        <div class="step__nav">
+          <button class="btn btn--quiet" type="button" data-back="1">Back</button>
+          <span class="spacer"></span>
+          <button class="btn" type="button" id="next2">Continue</button>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------- step 3 -->
+      <section class="step" data-step="3" aria-labelledby="s3" hidden>
+        <h2 class="step__title" id="s3">When</h2>
+        <p class="step__hint" id="timeHint">Choose a day, then a start time. We hold two vans, so a slot can be booked twice before it closes.</p>
+
+        <div class="cal">
+          <div class="cal__bar">
+            <span class="cal__month" id="calMonth">—</span>
+            <div class="cal__nav">
+              <button type="button" id="calPrev" aria-label="Previous month">←</button>
+              <button type="button" id="calNext" aria-label="Next month">→</button>
+            </div>
+          </div>
+          <div class="cal__grid" id="calGrid" role="grid" aria-label="Choose a date"></div>
+        </div>
+
+        <div class="slots" id="slots" hidden>
+          <p class="slots__title" id="slotsTitle">Start times</p>
+          <div class="slots__grid" id="slotGrid" role="group" aria-label="Start times"></div>
+        </div>
+
+        <div class="step__nav">
+          <button class="btn btn--quiet" type="button" data-back="2">Back</button>
+          <span class="spacer"></span>
+          <button class="btn" type="button" id="next3" disabled>Continue</button>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------- step 4 -->
+      <section class="step" data-step="4" aria-labelledby="s4" hidden>
+        <h2 class="step__title" id="s4">Details</h2>
+        <p class="step__hint">Where we are coming to, and who to ask for on the day.</p>
+
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <span class="field__error">We need a name for the record.</span>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <span class="field__error">That email does not look right.</span>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            <span class="field__error">A number we can reach you on.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="address">Where is the car?</label>
+          <input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, city, postcode" required>
+          <span class="field__error">We come to you — we need an address.</span>
+        </div>
+        <div class="field">
+          <label for="notes">Anything we should know</label>
+          <textarea id="notes" name="notes" placeholder="Ceramic already applied, garage code, dog in the house…"></textarea>
+        </div>
+
+        <div class="sum__rows" style="margin-top:8px" id="reviewRows"></div>
+
+        <div class="step__nav">
+          <button class="btn btn--quiet" type="button" data-back="3">Back</button>
+          <span class="spacer"></span>
+          <button class="btn btn--accent" type="submit" id="confirmBtn">Confirm booking</button>
+        </div>
+        <p class="mono" style="color:var(--muted); margin-top:18px; line-height:1.6">
+          No card is taken here. We confirm by email within one working hour and invoice the deposit.
+        </p>
+      </section>
+    </form>
+
+    <aside class="bk__aside" id="summary" aria-label="Booking summary">
+      <div class="sum__bar">
+        <div>
+          <p class="sum__label">Your booking</p>
+          <p class="sum__title" id="sumTitle">Nothing selected <em>yet.</em></p>
+        </div>
+        <div class="sum__total" style="padding:0">
+          <b id="sumTotal">$0</b>
+        </div>
+      </div>
+      <div class="sum__rows" id="sumRows"></div>
+      <p class="sum__deposit" id="sumDeposit">Pick a service to see the full price and deposit.</p>
+    </aside>
+  </div>
+
+  <!-- confirmation -->
+  <section class="confirm" id="confirm" hidden aria-live="polite">
+    <p class="mono" style="color:var(--accent-deep)">Confirmed</p>
+    <h2 class="display" style="font-size:var(--text-act); margin-top:14px">You are <em>in the book.</em></h2>
+    <p class="copy" style="margin-top:18px; color:var(--muted)" id="confirmLead"></p>
+    <p class="confirm__ref" id="confirmRef">TT-000000-0000</p>
+    <div class="confirm__rows" id="confirmRows"></div>
+    <div class="confirm__actions">
+      <button class="btn" type="button" id="downloadIcs">Add to calendar</button>
+      <a class="btn btn--quiet" href="index.html">Back to the site</a>
+      <button class="btn btn--quiet" type="button" id="bookAnother">Book another</button>
+    </div>
+  </section>
+</main>
+
+<div class="bk__foot">
+  <p>Availability is live for this browser: two vans, Mon–Sat, 08:00–18:00, twenty-four hours' notice. Full-day services (wrap, two-stage correction, 8-year ceramic) are booked as a drop-off and collected on the day shown. Bookings are stored on this device so you can check a slot twice.</p>
+</div>
+
+<script src="js/catalog.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

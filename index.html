@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torque &amp; Towel — Mobile detailing, correction, ceramic, wrap and tint</title>
+<meta name="description" content="A mobile detailing studio. Correction, ceramic coating, wrap and tint performed at your door, then documented: what we measured, what we corrected, what we sealed.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preload" href="assets/fonts/cabinet-grotesk-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="header__left">
+    <button class="plate" id="menuOpen" aria-expanded="false" aria-controls="menu">
+      <span class="plate__roll"><span><span class="plate__noun">Menu</span></span></span>
+    </button>
+    <a class="wordmark" id="wordmark" href="#top" aria-label="Torque &amp; Towel — home">
+      <img src="assets/logo-lockup.png" alt="Torque &amp; Towel" width="609" height="262">
+    </a>
+  </div>
+  <div class="header__right">
+    <a class="plate plate--accent" href="book.html">
+      <span class="plate__roll">
+        <span><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+        <span aria-hidden="true"><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<div class="menu" id="menu" data-open="false" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="menu__top">
+    <span class="mono" style="color:var(--muted)">Torque &amp; Towel</span>
+    <button class="plate" id="menuClose">
+      <span class="plate__roll"><span><span class="plate__noun">Close</span></span><span aria-hidden="true"><span class="plate__noun">Close</span></span></span>
+    </button>
+  </div>
+  <nav class="menu__list" aria-label="Primary">
+    <div class="menu__item"><a class="menu__link" href="#condition"><span>Condition</span><em>01</em></a></div>
+    <div class="menu__item"><a class="menu__link" href="#process"><span>Process</span><em>02</em></a></div>
+    <div class="menu__item"><a class="menu__link" href="#coat"><span>Coat</span><em>03</em></a></div>
+    <div class="menu__item"><a class="menu__link" href="#menu-section"><span>The menu</span><em>04</em></a></div>
+    <div class="menu__item"><a class="menu__link" href="book.html"><span>Book a slot</span><em>05</em></a></div>
+  </nav>
+  <div class="menu__meta mono">
+    <span>Mobile studio</span>
+    <span>Mon–Sat, 08:00–18:00</span>
+    <a href="mailto:studio@torqueandtowel.com">studio@torqueandtowel.com</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ================================================================= hero -->
+  <section class="hero" id="top">
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto"
+           poster="assets/img/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/tt-reel.mp4" type="video/mp4">
+    </video>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="mono hero__eyebrow" data-reveal>Mobile studio — we come to you</p>
+        <h1 class="display hero__title" data-lines>
+          <span class="line"><span>Nine hours</span></span>
+          <span class="line"><span><em>at your door.</em></span></span>
+        </h1>
+        <p class="hero__sub" data-reveal style="--i:2">Correction, ceramic, wrap and tint — performed in a sealed mobile bay, then <em>written down</em>: what we measured, what we corrected, what we sealed.</p>
+        <a class="plate plate--accent plate--wide" href="book.html" data-reveal style="--i:3">
+          <span class="plate__roll">
+            <span><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+            <span aria-hidden="true"><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero__controls">
+        <div class="cue" aria-hidden="true"></div>
+        <button class="hero__pause" id="heroPause" aria-pressed="false"><i aria-hidden="true"></i><span>Pause film</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================== quiet -->
+  <section class="act act--quiet" aria-label="The record">
+    <span class="act__num" aria-hidden="true"><b>00</b> —</span>
+    <p class="mono quiet__label" data-reveal>Every car leaves with a file</p>
+    <p class="quiet__text" data-reveal style="--i:1">A written record of the paint we measured, the defects we removed and the film we left on it. <em>No car leaves without one.</em></p>
+  </section>
+
+  <!-- =========================================================== 01 statement -->
+  <section class="act act--statement" id="condition">
+    <span class="act__num" aria-hidden="true"><b>01</b> —</span>
+    <div class="statement__media">
+      <img src="assets/img/stage-1.jpg" alt="Paint surface under a detailing lamp during decontamination" width="1280" height="720" loading="lazy">
+    </div>
+    <h2 class="display statement__title" data-lines>
+      <span class="line"><span>We measure</span></span>
+      <span class="line"><span><em>before we touch.</em></span></span>
+    </h2>
+    <div class="statement__body">
+      <div class="copy" data-reveal>
+        <p>Paint depth in microns, three readings per panel, photographed at 45 degrees under a fixed lamp. That is the first twenty minutes of every booking — before a machine or a bottle comes out of the van.</p>
+        <p>You get the readings either way. If correction cannot safely remove a defect, we say so and the price comes down.</p>
+      </div>
+    </div>
+
+    <div class="triptych">
+      <figure data-reveal>
+        <img src="assets/img/detail-1.jpg" alt="Close inspection of a corrected panel" width="720" height="900" loading="lazy">
+        <figcaption>Paint depth <b>118 µm</b></figcaption>
+      </figure>
+      <figure data-reveal style="--i:1">
+        <img src="assets/img/detail-2.jpg" alt="Machine polishing a panel edge" width="720" height="900" loading="lazy">
+        <figcaption>Defects removed <b>83%</b></figcaption>
+      </figure>
+      <figure data-reveal style="--i:2">
+        <img src="assets/img/detail-3.jpg" alt="Water beading on a freshly coated surface" width="720" height="900" loading="lazy">
+        <figcaption>Film build <b>2.1 µm</b></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================= 02 pinned -->
+  <section class="act act--pin" id="process" aria-labelledby="process-title">
+    <div class="pin" id="pin">
+      <span class="act__num act__num--light" aria-hidden="true"><b>02</b> —</span>
+
+      <div class="pin__stage" data-active="true">
+        <img src="assets/img/stage-1.jpg" alt="Decontamination wash on a dark car" width="1280" height="720" loading="lazy">
+        <div class="pin__caption">
+          <span class="mono">Stage 01 — Wash</span>
+          <h3 id="process-title"><em>Wash and decontaminate.</em> Two buckets, iron remover, clay — until the water sheets flat off the panel.</h3>
+        </div>
+      </div>
+
+      <div class="pin__stage" data-active="false" aria-hidden="true">
+        <img src="assets/img/stage-2.jpg" alt="Machine correction under inspection lighting" width="1280" height="720" loading="lazy">
+        <div class="pin__caption">
+          <span class="mono">Stage 02 — Correct</span>
+          <h3><em>Correct and measure.</em> Machine polish, three depth readings a panel, every defect counted on the sheet.</h3>
+        </div>
+      </div>
+
+      <div class="pin__stage" data-active="false" aria-hidden="true">
+        <img src="assets/img/stage-3.jpg" alt="Ceramic coating being levelled on a panel" width="1280" height="720" loading="lazy">
+        <div class="pin__caption">
+          <span class="mono">Stage 03 — Coat</span>
+          <h3><em>Coat and cure.</em> Panel by panel, then forty-eight hours of quiet before the car sees weather.</h3>
+        </div>
+      </div>
+
+      <div class="pin__dots" role="tablist" aria-label="Process stages">
+        <button class="pin__dot" role="tab" data-stage="0" data-active="true" aria-label="Stage 1: wash and decontaminate" aria-selected="true"></button>
+        <button class="pin__dot" role="tab" data-stage="1" data-active="false" aria-label="Stage 2: correct and measure" aria-selected="false"></button>
+        <button class="pin__dot" role="tab" data-stage="2" data-active="false" aria-label="Stage 3: coat and cure" aria-selected="false"></button>
+      </div>
+      <div class="pin__count"><b>01</b> / 03</div>
+    </div>
+  </section>
+
+  <div class="act" style="height:var(--strip)" aria-hidden="true"></div>
+
+  <!-- =============================================================== 03 coat -->
+  <section class="act act--split" id="coat">
+    <span class="act__num" aria-hidden="true"><b>03</b> —</span>
+    <div class="split__media">
+      <img src="assets/img/finish-duotone.jpg" alt="Finished panel catching a single light source" width="900" height="1125" loading="lazy">
+    </div>
+    <div class="split__body">
+      <h2 class="display split__title" data-lines>
+        <span class="line"><span>The finish</span></span>
+        <span class="line"><span><em>is the receipt.</em></span></span>
+      </h2>
+      <div class="copy" data-reveal>
+        <p>A coating is only as good as the surface under it, so we never sell one without correction. What you are buying is a nine-hour appointment, a measured film and a warranty you can read.</p>
+      </div>
+      <dl class="spec-list" data-reveal style="--i:1">
+        <div><dt>Film build</dt><dd>2.1 µm</dd></div>
+        <div><dt>Contact angle</dt><dd>105°</dd></div>
+        <div><dt>Cure before rain</dt><dd>48 h</dd></div>
+        <div><dt>Warranty</dt><dd>5 years</dd></div>
+      </dl>
+      <a class="plate" href="book.html" data-reveal style="--i:2">
+        <span class="plate__roll">
+          <span><span class="plate__verb">See</span><span class="plate__noun">The coating</span></span>
+          <span aria-hidden="true"><span class="plate__verb">See</span><span class="plate__noun">The coating</span></span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================ spec plate -->
+  <section class="act act--spec" aria-labelledby="spec-title">
+    <div class="spec__head">
+      <h2 class="display spec__title" id="spec-title" data-lines>
+        <span class="line"><span>One car.</span></span>
+        <span class="line"><span><em>Nine hours.</em></span></span>
+      </h2>
+      <p class="spec__note" data-reveal>The record we hand over at collection. Same sheet, every car — it is the only marketing we trust.</p>
+    </div>
+    <div class="spec__grid" data-reveal>
+      <div class="spec__row">
+        <span class="spec__label">Panels measured</span>
+        <span class="spec__value"><b>24</b></span>
+        <span class="spec__unit">3 readings each</span>
+      </div>
+      <div class="spec__row">
+        <span class="spec__label">Hours in the bay</span>
+        <span class="spec__value"><b>9.0</b></span>
+        <span class="spec__unit">One technician</span>
+      </div>
+      <div class="spec__row spec__row--accent">
+        <span class="spec__label">Clear coat added</span>
+        <span class="spec__value"><b>2.1</b></span>
+        <span class="spec__unit">µm, measured</span>
+      </div>
+      <div class="spec__row">
+        <span class="spec__label">Defects removed</span>
+        <span class="spec__value"><b>83</b></span>
+        <span class="spec__unit">% of the audit</span>
+      </div>
+      <div class="spec__row">
+        <span class="spec__label">Water contact angle</span>
+        <span class="spec__value"><b>105</b></span>
+        <span class="spec__unit">degrees</span>
+      </div>
+      <div class="spec__row">
+        <span class="spec__label">Cure before weather</span>
+        <span class="spec__value"><b>48</b></span>
+        <span class="spec__unit">hours</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ manifesto -->
+  <section class="act act--manifesto" aria-label="Statement">
+    <p class="manifesto__line" data-lines>
+      <span class="line"><span>The <img class="manifesto__img" src="assets/img/manifesto.jpg" alt="" width="640" height="640" loading="lazy"> is</span></span>
+      <span class="line"><span><em>the evidence.</em></span></span>
+    </p>
+  </section>
+
+  <!-- ================================================================ quote -->
+  <section class="act" aria-label="Customer note">
+    <div style="padding:0 var(--gutter) 120px; display:grid; grid-template-columns:7fr 5fr; gap:40px; align-items:start;">
+      <figure data-reveal style="margin:0;">
+        <blockquote class="copy copy--lede" style="font-size:var(--text-kicker); line-height:1.4; max-width:38ch;">
+          <p>“They found a scratch I had stopped seeing, photographed it, and showed me the panel under a lamp before they touched it. I have never had a service explain itself like that.”</p>
+        </blockquote>
+        <figcaption class="mono" style="margin-top:28px; color:var(--muted);">
+          Dana R. — 911 Carrera <span style="color:var(--ink)">· Ceramic 5-Year</span>
+        </figcaption>
+      </figure>
+      <p class="mono" style="color:var(--muted); justify-self:end; text-align:right;">Reviewed after<br>collection, not before</p>
+    </div>
+  </section>
+
+  <!-- ================================================================= menu -->
+  <section class="act act--menu" id="menu-section">
+    <div class="menu-head">
+      <h2 class="display menu-head__title" data-lines>
+        <span class="line"><span>The menu</span></span>
+        <span class="line"><span><em>and the math.</em></span></span>
+      </h2>
+      <p class="copy copy--quiet" data-reveal style="max-width:38ch;">One-off work or a standing appointment. Prices below are for a coupe or sedan; SUVs add roughly 18%, vans and long wheelbases 34% — the booking form does the arithmetic before you commit.</p>
+    </div>
+
+    <div class="menu-cols">
+      <div>
+        <div class="price-group" data-reveal>
+          <h3 class="price-group__title"><span>Detailing</span><span>From</span></h3>
+          <div class="price-row">
+            <span class="price-row__name">The Signature Detail</span>
+            <span class="price-row__amount"><b>$349</b><span>4.5 hours</span></span>
+            <span class="price-row__meta">Wash · clay · one machine pass · interior reset</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Interior Restoration</span>
+            <span class="price-row__amount"><b>$279</b><span>4 hours</span></span>
+            <span class="price-row__meta">Steam extraction · leather fed · ozone</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Maintenance Wash</span>
+            <span class="price-row__amount"><b>$129</b><span>2 hours</span></span>
+            <span class="price-row__meta">Two-bucket wash · wheels · glass</span>
+          </div>
+        </div>
+
+        <div class="price-group" data-reveal style="--i:1">
+          <h3 class="price-group__title"><span>Correction</span><span>From</span></h3>
+          <div class="price-row">
+            <span class="price-row__name">Scratch &amp; Defect Removal</span>
+            <span class="price-row__amount"><b>$189</b><span>1 panel</span></span>
+            <span class="price-row__meta">Measured before and after</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Single-Stage Correction</span>
+            <span class="price-row__amount"><b>$549</b><span>8 hours</span></span>
+            <span class="price-row__meta">70–85% of swirls removed</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Two-Stage Correction</span>
+            <span class="price-row__amount"><b>$949</b><span>2 days</span></span>
+            <span class="price-row__meta">Full defect removal</span>
+          </div>
+        </div>
+
+        <div class="price-group" data-reveal style="--i:2">
+          <h3 class="price-group__title"><span>Ceramic</span><span>From</span></h3>
+          <div class="price-row">
+            <span class="price-row__name">Ceramic — 3 Year</span>
+            <span class="price-row__amount"><b>$899</b><span>9 hours</span></span>
+            <span class="price-row__meta">Includes single-stage correction</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Ceramic — 5 Year</span>
+            <span class="price-row__amount"><b>$1,349</b><span>10 hours</span></span>
+            <span class="price-row__meta">Two-stage · glass and wheels</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Ceramic — 8 Year</span>
+            <span class="price-row__amount"><b>$1,949</b><span>2 days</span></span>
+            <span class="price-row__meta">Highest film build · PPF front</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="price-group" data-reveal style="--i:1">
+          <h3 class="price-group__title"><span>Wrap</span><span>From</span></h3>
+          <div class="price-row">
+            <span class="price-row__name">Partial Wrap</span>
+            <span class="price-row__amount"><b>$849</b><span>8 hours</span></span>
+            <span class="price-row__meta">Roof · bonnet · mirrors · one panel</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Full Colour — Gloss</span>
+            <span class="price-row__amount"><b>$3,650</b><span>3 days</span></span>
+            <span class="price-row__meta">Trim and lights removed</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Full Colour — Satin</span>
+            <span class="price-row__amount"><b>$4,250</b><span>3 days</span></span>
+            <span class="price-row__meta">Correction included</span>
+          </div>
+        </div>
+
+        <div class="price-group" data-reveal style="--i:2">
+          <h3 class="price-group__title"><span>Tint</span><span>From</span></h3>
+          <div class="price-row">
+            <span class="price-row__name">Front Doors</span>
+            <span class="price-row__amount"><b>$199</b><span>2 hours</span></span>
+            <span class="price-row__meta">Ceramic · legal VLT</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Full Vehicle — Carbon</span>
+            <span class="price-row__amount"><b>$349</b><span>3 hours</span></span>
+            <span class="price-row__meta">No metal layer</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row__name">Full Vehicle — Ceramic</span>
+            <span class="price-row__amount"><b>$499</b><span>4 hours</span></span>
+            <span class="price-row__meta">Maximum heat rejection</span>
+          </div>
+        </div>
+
+        <div class="price-group" data-reveal style="--i:3">
+          <h3 class="price-group__title"><span>Membership</span><span>Per month</span></h3>
+          <div class="membership">
+            <div class="membership__row">
+              <div class="membership__top"><span class="membership__name">The Rinse</span><span class="membership__price"><b>$129</b> /mo</span></div>
+              <p class="membership__desc">Two maintenance washes a month, interior reset, glass.</p>
+            </div>
+            <div class="membership__row">
+              <div class="membership__top"><span class="membership__name">The Standard</span><span class="membership__price"><b>$279</b> /mo</span></div>
+              <p class="membership__desc">Weekly wash, monthly interior, quarterly decon and sealant.</p>
+            </div>
+            <div class="membership__row">
+              <div class="membership__top"><span class="membership__name">The Concours</span><span class="membership__price"><b>$549</b> /mo</span></div>
+              <p class="membership__desc">Weekly wash, monthly Signature Detail, annual correction.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="scan" data-reveal>
+          <p class="scan__title">US market scan · 2025</p>
+          <div class="scan__row"><span>Full detail</span><span><b>$200–500</b></span></div>
+          <div class="scan__row"><span>Paint correction</span><span><b>$400–1,200</b></span></div>
+          <div class="scan__row"><span>Ceramic coating</span><span><b>$700–2,500</b></span></div>
+          <div class="scan__row"><span>Full colour wrap</span><span><b>$3,000–6,500</b></span></div>
+          <div class="scan__row"><span>Full vehicle tint</span><span><b>$250–600</b></span></div>
+          <div class="scan__row"><span>Monthly membership</span><span><b>$80–400</b></span></div>
+          <p class="scan__note">Published ranges for comparable metro services. We sit mid-band on purpose: the correction and the record are what you are paying for, not the brand on the bottle.</p>
+        </div>
+
+        <div class="menu-cta">
+          <a class="plate plate--accent" href="book.html">
+            <span class="plate__roll">
+              <span><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+              <span aria-hidden="true"><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+            </span>
+          </a>
+          <p class="menu-cta__note">20% deposit holds the bay. Balance on collection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== gallery -->
+  <section class="act act--gallery" id="gallery" aria-label="Gallery">
+    <div class="gallery__grid">
+      <a class="gallery__item" href="book.html" data-reveal>
+        <img src="assets/img/gallery-1.jpg" alt="Panel reflection after correction" width="480" height="600" loading="lazy">
+        <span class="gallery__caption">Panel 04 · correction</span>
+      </a>
+      <a class="gallery__item" href="book.html" data-reveal style="--i:1">
+        <img src="assets/img/gallery-2.jpg" alt="Detail work under studio light" width="480" height="600" loading="lazy">
+        <span class="gallery__caption">Wheel arch · decon</span>
+      </a>
+      <a class="gallery__item" href="book.html" data-reveal style="--i:2">
+        <img src="assets/img/gallery-3.jpg" alt="Coating levelling across a panel" width="480" height="600" loading="lazy">
+        <span class="gallery__caption">Coat · levelling</span>
+      </a>
+      <a class="gallery__item" href="book.html" data-reveal style="--i:3">
+        <img src="assets/img/gallery-4.jpg" alt="Inspection light across a finished surface" width="480" height="600" loading="lazy">
+        <span class="gallery__caption">Inspection · 45°</span>
+      </a>
+      <a class="gallery__item" href="book.html" data-reveal style="--i:4">
+        <img src="assets/img/gallery-5.jpg" alt="Finished surface with water beading" width="480" height="600" loading="lazy">
+        <span class="gallery__caption">Handover · 48 h</span>
+      </a>
+    </div>
+    <div class="gallery__foot">
+      <p class="mono" style="color:var(--muted)">Five of twenty-four panels from last week</p>
+      <a class="link-quiet" href="book.html">Book the next one</a>
+    </div>
+  </section>
+
+  <!-- ================================================================ close -->
+  <section class="act act--close">
+    <h2 class="close__title" data-reveal>Your car deserves <em>the record.</em></h2>
+    <p class="close__sub" data-reveal style="--i:1">Pick a service, a slot and a vehicle. The price is fixed before you pay a deposit.</p>
+    <a class="plate plate--accent plate--wide" href="book.html" data-reveal style="--i:2">
+      <span class="plate__roll">
+        <span><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+        <span aria-hidden="true"><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
+      </span>
+    </a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <nav class="footer__nav" aria-label="Footer">
+      <p class="mono footer__label">Studio</p>
+      <a href="#condition">Condition</a>
+      <a href="#process">Process</a>
+      <a href="#menu-section">The menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="book.html">Book a slot</a>
+    </nav>
+    <div>
+      <p class="mono footer__label">Stay in touch</p>
+      <form class="footer__form" id="newsletter" novalidate>
+        <label class="skip" for="newsletterEmail">Email address</label>
+        <input id="newsletterEmail" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+      <p class="mono" id="newsletterNote" style="margin-top:14px; color:var(--muted)" aria-live="polite"></p>
+    </div>
+    <div class="footer__social">
+      <p class="mono footer__label">Elsewhere</p>
+      <a href="https://instagram.com" rel="noopener">Instagram ↗</a><br>
+      <a href="https://maps.google.com" rel="noopener">Google reviews ↗</a>
+    </div>
+  </div>
+
+  <div class="footer__mark" aria-hidden="true">
+    <img src="assets/logo-lockup.png" alt="" width="609" height="262">
+  </div>
+
+  <div class="footer__legal mono">
+    <span>© 2026 Torque &amp; Towel</span>
+    <span>Mon–Sat · 08:00–18:00 · 20 mile radius</span>
+    <a href="book.html">Privacy</a>
+  </div>
+</footer>
+
+<script src="js/catalog.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
