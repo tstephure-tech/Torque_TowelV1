@@ -18,22 +18,21 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="header">
+<header class="header" id="siteHeader">
   <div class="header__left">
-    <button class="plate" id="menuOpen" aria-expanded="false" aria-controls="menu">
-      <span class="plate__roll"><span><span class="plate__noun">Menu</span></span></span>
-    </button>
     <a class="wordmark" id="wordmark" href="#top" aria-label="Torque &amp; Towel — home">
       <img src="assets/logo-lockup.png" alt="Torque &amp; Towel" width="609" height="262">
     </a>
   </div>
   <div class="header__right">
-    <a class="plate plate--accent" href="book.html">
-      <span class="plate__roll">
-        <span><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
-        <span aria-hidden="true"><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
-      </span>
-    </a>
+    <nav class="header__nav" aria-label="Primary">
+      <a href="#condition">Condition</a>
+      <a href="#process">Process</a>
+      <a href="#coat">Coat</a>
+      <a href="#menu-section">The menu</a>
+      <a href="book.html">Book a slot</a>
+    </nav>
+    <button class="header__toggle mono" id="menuOpen" aria-expanded="false" aria-controls="menu">Menu</button>
   </div>
 </header>
 
@@ -70,13 +69,15 @@
 
     <div class="hero__inner">
       <div class="hero__text">
-        <p class="mono hero__eyebrow" data-reveal>Mobile studio — we come to you</p>
+        <div class="hero__logo" data-reveal>
+          <img src="assets/logo-lockup-dark.png" alt="Torque &amp; Towel" width="609" height="262">
+        </div>
         <h1 class="display hero__title" data-lines>
-          <span class="line"><span>Nine hours</span></span>
+          <span class="line"><span>Car Spa</span></span>
           <span class="line"><span><em>at your door.</em></span></span>
         </h1>
-        <p class="hero__sub" data-reveal style="--i:2">Correction, ceramic, wrap and tint — performed in a sealed mobile bay, then <em>written down</em>: what we measured, what we corrected, what we sealed.</p>
-        <a class="plate plate--accent plate--wide" href="book.html" data-reveal style="--i:3">
+        <p class="hero__sub" data-reveal style="--i:1">Fully equipped luxury detailing, paint care, window treatments, and wrap services without leaving the house.</p>
+        <a class="plate plate--accent plate--wide" href="book.html" data-reveal style="--i:2">
           <span class="plate__roll">
             <span><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>
             <span aria-hidden="true"><span class="plate__verb">Book</span><span class="plate__noun">A slot</span></span>

@@ -24,11 +24,13 @@
   }
 
   /* -------------------------------------------------------------- header -- */
+  var siteHeader = document.getElementById("siteHeader");
   var wordmark = document.getElementById("wordmark");
   var hero = document.querySelector(".hero");
 
   function syncHeader() {
     var past = window.scrollY > (hero ? hero.offsetHeight - 96 : 400);
+    if (siteHeader) siteHeader.classList.toggle("is-scrolled", past);
     if (wordmark) wordmark.classList.toggle("is-on", past);
   }
   syncHeader();
