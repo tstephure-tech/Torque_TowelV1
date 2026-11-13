@@ -1,5 +1,5 @@
 {
-  "name": "Torque_Towel",
+  "name": "torque_towel",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
