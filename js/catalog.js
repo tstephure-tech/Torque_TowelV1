@@ -15,9 +15,6 @@
   var CATEGORIES = [
     { id: "detail", label: "Detailing", blurb: "Wash, decontaminate, reset the interior." },
     { id: "correction", label: "Correction", blurb: "Machine polishing that removes defects, not paint." },
-    { id: "coating", label: "Ceramic", blurb: "A measured film that keeps the finish for years." },
-    { id: "wrap", label: "Wrap", blurb: "Colour change and protection in one film." },
-    { id: "tint", label: "Tint", blurb: "Ceramic and carbon film, legal VLT." },
     { id: "membership", label: "Membership", blurb: "The car stays clean without you booking it." }
   ];
 
@@ -54,62 +51,6 @@
       id: "stage2", cat: "correction", name: "Two-Stage Correction", base: 949,
       hours: 12, days: 2,
       desc: "Full defect removal — sanding marks, holograms, deep scratches. Two days, both measured."
-    },
-
-    /* ------------------------------------------------------------ coating */
-    {
-      id: "coat3", cat: "coating", name: "Ceramic — 3 Year", base: 899,
-      hours: 9,
-      desc: "Includes a single-stage correction. 2.1 µm film build, 105° water contact angle, annual inspection."
-    },
-    {
-      id: "coat5", cat: "coating", name: "Ceramic — 5 Year", base: 1349,
-      hours: 10, popular: true,
-      desc: "Two-stage correction, wheels and glass coated, five years of documented warranty."
-    },
-    {
-      id: "coat8", cat: "coating", name: "Ceramic — 8 Year", base: 1949,
-      hours: 14, days: 2,
-      desc: "Our highest film build, with paint protection film on the front bumper and mirrors."
-    },
-
-    /* --------------------------------------------------------------- wrap */
-    {
-      id: "wrapPartial", cat: "wrap", name: "Partial Wrap", base: 849,
-      hours: 8,
-      desc: "Roof, bonnet, mirrors or a single panel in any 3M 2080 finish. Edges wrapped, never cut on the car."
-    },
-    {
-      id: "wrapGloss", cat: "wrap", name: "Full Colour Change — Gloss", base: 3650,
-      hours: 24, days: 3,
-      desc: "Trim and lights removed, every panel wrapped and reassembled. Three days in a dust-controlled bay."
-    },
-    {
-      id: "wrapSatin", cat: "wrap", name: "Full Colour Change — Satin", base: 4250,
-      hours: 28, days: 3,
-      desc: "Satin and matte films take longer and show every flaw underneath. Correction is included."
-    },
-
-    /* --------------------------------------------------------------- tint */
-    {
-      id: "tintFront", cat: "tint", name: "Front Doors", base: 199,
-      hours: 2,
-      desc: "Ceramic film, 99% UV rejection, legal VLT for your state — checked before we cut."
-    },
-    {
-      id: "tintCarbon", cat: "tint", name: "Full Vehicle — Carbon", base: 349,
-      hours: 3,
-      desc: "Dyed carbon film. No metal layer, so no signal interference and no colour shift."
-    },
-    {
-      id: "tintCeramic", cat: "tint", name: "Full Vehicle — Ceramic", base: 499,
-      hours: 4, popular: true,
-      desc: "Maximum heat rejection in a film that stays clear. Windscreen can be added."
-    },
-    {
-      id: "tintShield", cat: "tint", name: "Windscreen Clear", base: 249,
-      hours: 2,
-      desc: "88% VLT, 99% UV. Invisible from outside, and the dash stops fading."
     },
 
     /* --------------------------------------------------------- membership */

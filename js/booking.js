@@ -284,7 +284,7 @@
       html += '<div class="sum__row"><span>' + (span.days > 1 ? "Drop-off" : "Date") + "</span><b>" + fmtDate(state.date) + (state.time != null ? " · " + fmtTime(state.time) : "") + "</b></div>";
     }
     rows.innerHTML = html;
-    deposit.innerHTML = "Deposit to hold the bay — <b style=\"color:var(--ink);font-weight:400\">" + T.money(t.deposit) + "</b> (20%). Balance on collection." + (t.monthly ? " Membership renews monthly; cancel with seven days' notice." : "");
+    deposit.innerHTML = "Deposit to hold your slot — <b style=\"color:var(--ink);font-weight:400\">" + T.money(t.deposit) + "</b> (20%). Balance on collection." + (t.monthly ? " Membership renews monthly; cancel with seven days' notice." : "");
     renderReview();
   }
 
@@ -427,9 +427,14 @@
   loadDraft();
 
   if (state.serviceId) {
-    $("#next1").disabled = false;
     var active = T.serviceById(state.serviceId);
-    if (active) state.cat = active.cat;
+    if (active) {
+      $("#next1").disabled = false;
+      state.cat = active.cat;
+    } else {
+      state.serviceId = null;
+      state.cat = "detail";
+    }
     renderTabs();
     renderServices();
     renderVehicles();
