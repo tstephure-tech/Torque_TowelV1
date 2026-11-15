@@ -29,6 +29,11 @@
   var hero = document.querySelector(".hero");
 
   function syncHeader() {
+    if (siteHeader && siteHeader.dataset.solid === "true") {
+      siteHeader.classList.add("is-scrolled");
+      if (wordmark) wordmark.classList.add("is-on");
+      return;
+    }
     var past = window.scrollY > (hero ? hero.offsetHeight - 96 : 400);
     if (siteHeader) siteHeader.classList.toggle("is-scrolled", past);
     if (wordmark) wordmark.classList.toggle("is-on", past);
@@ -152,6 +157,47 @@
       });
     });
   }
+
+  /* --------------------------------------------------- before/after compare -- */
+  var compares = [].slice.call(document.querySelectorAll("[data-compare]"));
+  compares.forEach(function (slider) {
+    var input = slider.querySelector(".compare-slider__input");
+    var beforeTag = slider.querySelector(".compare-slider__tag--before");
+    var afterTag = slider.querySelector(".compare-slider__tag--after");
+    if (!input) return;
+
+    function applyPos(val) {
+      var clamped = Math.min(100, Math.max(0, Number(val)));
+      slider.style.setProperty("--pos", clamped + "%");
+      if (beforeTag) beforeTag.style.opacity = clamped < 14 ? "0" : "1";
+      if (afterTag) afterTag.style.opacity = clamped > 86 ? "0" : "1";
+    }
+
+    function updateFromPointer(clientX) {
+      var rect = slider.getBoundingClientRect();
+      if (!rect.width) return;
+      var pct = ((clientX - rect.left) / rect.width) * 100;
+      var rounded = Math.round(Math.min(100, Math.max(0, pct)) * 10) / 10;
+      input.value = String(rounded);
+      applyPos(rounded);
+    }
+
+    var dragging = false;
+    input.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      if (input.setPointerCapture) input.setPointerCapture(e.pointerId);
+      updateFromPointer(e.clientX);
+    });
+    input.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      updateFromPointer(e.clientX);
+    });
+    input.addEventListener("pointerup", function () { dragging = false; });
+    input.addEventListener("pointercancel", function () { dragging = false; });
+    input.addEventListener("input", function () { applyPos(input.value); });
+    input.addEventListener("change", function () { applyPos(input.value); });
+    applyPos(input.value);
+  });
 
   /* ----------------------------------------------------------- newsletter -- */
   var form = document.getElementById("newsletter");
